@@ -18,7 +18,7 @@ html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.6}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+.wrap{max-width:76rem;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
 nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
 nav .mark{font-weight:800;text-decoration:none}
 nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
@@ -141,6 +141,20 @@ nav ul{align-items:center}
 :root[data-theme="dark"] .portrait{background:linear-gradient(180deg,#4E0911,#2B0A0C)}
 @media (max-width:600px){.about-me{grid-template-columns:1fr}.portrait{max-width:12rem}}
 :root[data-theme="dark"] .portrait img{filter:brightness(.78) contrast(1.06) saturate(.96)}
+
+@media (min-width:900px){
+.hero{padding:6rem 0 5rem}
+.hero h1{max-width:16ch}
+.hero p{font-size:1.4rem;max-width:42rem}
+.about-me{grid-template-columns:20rem 1fr;gap:3rem}
+.about-me p{font-size:1.15rem;max-width:44rem}
+.pgrid{grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1.5rem}
+.track .pcard{flex-basis:20rem}
+.dv #detail{max-width:60rem}
+.project p,.pts{max-width:48rem}
+.skills{max-width:60rem}
+.contact p{max-width:44rem}
+}
 </style>
 </head>
 <body>
